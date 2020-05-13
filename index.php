@@ -23,10 +23,10 @@
     </nav>
     <br>
     <section class="page-section">
-        <h1 class="text-center text-uppercase">Welcome to Zarif's Organic Shop</h1>
+        <h1 class="text-center text-uppercase font-weight-bold">Welcome to Zarif's Organic Shop</h1>
         <br />
         <div class="container">
-            <div class="row">
+            <div class="row" style="margin-top: 20px">
                 <?php
                     include('Config.php');
                     $sql = "SELECT * FROM `products`";
@@ -34,7 +34,7 @@
                     while($row = mysqli_fetch_assoc($query)){
                         echo '
                         <div class="col-sm-4">
-                            <div class="card" style="width: 18rem;">
+                            <div class="card" style="width: 18rem;margin-top: 30px;">
                                 <img src="'. $row["link"] .'" class="card-img-top" alt="..." style="height: 14rem"/>
                                 <div class="card-body">
                                     <h5 class="card-title">'.$row["title"].'</h5>
@@ -43,9 +43,11 @@
                                 </div>
                             </div>
                         </div>
+                        <br/>
                         ';
                     }
                 ?>
+                
             </div>
         </div>
 
